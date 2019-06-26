@@ -1,4 +1,4 @@
-<div class="navbar navbar-expand-md navbar-dark bg-indigo navbar-static">
+<div class="navbar navbar-expand-md navbar-dark bg-dark navbar-static">
     <div class="navbar-brand">
         <a href="index.html" class="d-inline-block">
             <img src="{{asset('dashboard/material/main_assets/images/logo_light.png')}}" alt="">

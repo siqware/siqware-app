@@ -11,10 +11,10 @@
 |
 */
 
-Route::get('/', function () {
-    return view('blank');
-});
+use Illuminate\Support\Facades\Route;
 
+Route::get('/', function () {return view('user.index');})->name('dashboard');
 Auth::routes();
-
 Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/file-manager', function (){return view('vendor.file-manager.fmButton');})->name('file.manager');
+Route::get('/media', function (){return view('media.index');})->name('media');
