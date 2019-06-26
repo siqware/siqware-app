@@ -18,3 +18,7 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/file-manager', function (){return view('vendor.file-manager.fmButton');})->name('file.manager');
 Route::get('/media', function (){return view('media.index');})->name('media');
+/*UserController*/
+Route::resource('user','UserController');
+/*Route::get('login','UserController@login')->name('login');
+Route::get('register','UserController@register')->name('register');*/
