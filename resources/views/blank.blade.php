@@ -76,8 +76,8 @@
     </div>
 @stop
 @push('page-js')
-
+    <script src=""></script>
 @endpush
 @push('page-css')
-
+    <link rel="stylesheet" href="">
 @endpush
