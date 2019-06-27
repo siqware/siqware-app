@@ -446,7 +446,7 @@ var IonSlider = function() {
             from: +moment().subtract(6, 'months').format('X'),
             force_edges: true,
             prettify: function (num) {
-                var m = moment(num, 'X').locale('ru');
+                var m = moment(num, 'X').locale('kh.json');
                 return m.format('MMMM');
             }
         });

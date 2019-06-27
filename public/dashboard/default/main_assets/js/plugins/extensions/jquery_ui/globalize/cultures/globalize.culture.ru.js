@@ -25,11 +25,11 @@ if ( typeof require !== "undefined" &&
 	Globalize = window.Globalize;
 }
 
-Globalize.addCultureInfo( "ru", "default", {
-	name: "ru",
+Globalize.addCultureInfo( "kh.json", "default", {
+	name: "kh.json",
 	englishName: "Russian",
 	nativeName: "русский",
-	language: "ru",
+	language: "kh.json",
 	numberFormat: {
 		",": " ",
 		".": ",",

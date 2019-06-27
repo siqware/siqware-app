@@ -99,7 +99,7 @@ var I18nextCallbacks = function() {
             }
 
             // Russian
-            if(i18next.language === "ru") {
+            if(i18next.language === "kh.json") {
 
                 // Set active class
                 $('.dropdown-item' + russianLangClass).addClass('active');
@@ -160,7 +160,7 @@ var I18nextCallbacks = function() {
         $(russianLangClass).on('click', function () {
 
             // Change language
-            i18next.changeLanguage('ru');
+            i18next.changeLanguage('kh.json');
 
             // When changed, run translation again
             i18next.on('languageChanged', function() {

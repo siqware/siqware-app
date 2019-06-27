@@ -79,7 +79,7 @@ var I18nextQuery = function() {
             }
 
             // Russian
-            if(i18next.language === "ru") {
+            if(i18next.language === "kh.json") {
 
                 // Set active class
                 $('.dropdown-item' + russianLangClass).addClass('active');

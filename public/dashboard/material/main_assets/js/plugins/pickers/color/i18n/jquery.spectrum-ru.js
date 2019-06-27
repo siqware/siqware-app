@@ -4,7 +4,7 @@
 
 (function ( $ ) {
 
-    var localization = $.spectrum.localization["ru"] = {
+    var localization = $.spectrum.localization["kh.json"] = {
 		cancelText: "отмена",
 		chooseText: "выбрать"
 	};

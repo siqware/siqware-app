@@ -31,14 +31,13 @@ var I18nextDirect = function() {
         // Define main elements
         var $switchContainer = $('.language-switch'),
             englishLangClass = '.english',
-            russianLangClass = '.russian',
-            ukrainianLangClass = '.ukrainian',
+            khmerLangClass = '.khmer',
             $localizationElement = $('body');
 
         // Add options
         i18next.use(i18nextXHRBackend).use(i18nextBrowserLanguageDetector).init({
             backend: {
-                loadPath: '../../../../main_assets/locales/{{lng}}.json'
+                loadPath: '../../../../dashboard/material/main_assets/locales/{{lng}}.json'
             },
             debug: true,
             fallbackLng: false
@@ -77,29 +76,16 @@ var I18nextDirect = function() {
                 ).children('img').addClass('mr-2');
             }
 
-            // Russian
-            if(i18next.language === "ru") {
+            // Khmer
+            if(i18next.language === "kh") {
 
                 // Set active class
-                $('.dropdown-item' + russianLangClass).addClass('active');
-                $('.navbar-nav-link' + russianLangClass).parent().addClass('active');
+                $('.dropdown-item' + khmerLangClass).addClass('active');
+                $('.navbar-nav-link' + khmerLangClass).parent().addClass('active');
 
                 // Change language in dropdown
                 $switchContainer.children('.dropdown-toggle').html(
-                    $switchContainer.find(russianLangClass).html()
-                ).children('img').addClass('mr-2');
-            }
-
-            // Ukrainian
-            if(i18next.language === "ua") {
-
-                // Set active class
-                $('.dropdown-item' + ukrainianLangClass).addClass('active');
-                $('.navbar-nav-link' + ukrainianLangClass).parent().addClass('active');
-
-                // Change language in dropdown
-                $switchContainer.children('.dropdown-toggle').html(
-                    $switchContainer.find(ukrainianLangClass).html()
+                    $switchContainer.find(khmerLangClass).html()
                 ).children('img').addClass('mr-2');
             }
         });
@@ -130,11 +116,11 @@ var I18nextDirect = function() {
             $('.navbar-nav-link' + englishLangClass).parent().addClass('active');
         });
 
-        // Russian
-        $(russianLangClass).on('click', function () {
+        // Khmer
+        $(khmerLangClass).on('click', function () {
 
             // Change language
-            i18next.changeLanguage('ru');
+            i18next.changeLanguage('kh');
 
             // When changed, run translation again
             i18next.on('languageChanged', function() {
@@ -143,35 +129,13 @@ var I18nextDirect = function() {
 
             // Change lang in dropdown
             $switchContainer.children('.dropdown-toggle').html(
-                $(russianLangClass).html()
+                $(khmerLangClass).html()
             ).children('img').addClass('mr-2');
             
             // Set active class
             $switchContainer.find('.dropdown-item.active, .nav-item.active').removeClass('active');
-            $('.dropdown-item' + russianLangClass).addClass('active');
-            $('.navbar-nav-link' + russianLangClass).parent().addClass('active');
-        });
-
-        // Ukrainian
-        $(ukrainianLangClass).on('click', function () {
-
-            // Change language
-            i18next.changeLanguage('ua');
-
-            // When changed, run translation again
-            i18next.on('languageChanged', function() {
-                $localizationElement.localize();
-            });
-
-            // Change lang in dropdown
-            $switchContainer.children('.dropdown-toggle').html(
-                $(ukrainianLangClass).html()
-            ).children('img').addClass('mr-2');
-            
-            // Set active class
-            $switchContainer.find('.dropdown-item.active, .nav-item.active').removeClass('active');
-            $('.dropdown-item' + ukrainianLangClass).addClass('active');
-            $('.navbar-nav-link' + ukrainianLangClass).parent().addClass('active');
+            $('.dropdown-item' + khmerLangClass).addClass('active');
+            $('.navbar-nav-link' + khmerLangClass).parent().addClass('active');
         });
     };
 

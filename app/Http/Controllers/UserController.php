@@ -25,7 +25,7 @@ class UserController extends Controller
     {
         return view('user.auth.register');
     }
-    public function register()
+    public function register_index()
     {
         return view('user.auth.register');
     }
@@ -85,7 +85,13 @@ class UserController extends Controller
     {
         //
     }
-    public function login(){
+    public function login_index(){
         return view('user.auth.login');
+    }
+    public function recover_index(){
+        return view('user.auth.recover');
+    }
+    public function authentication_index(){
+        return view('user.auth.index');
     }
 }

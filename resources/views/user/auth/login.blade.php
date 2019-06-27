@@ -3,7 +3,8 @@
 Login
 @stop
 @section('page-form')
-    <form class="login-form" action="index.html">
+    <form class="login-form" method="post" action="{{ route('login') }}">
+        @csrf
         <div class="card mb-0">
             <div class="card-body">
                 <div class="text-center mb-3">
@@ -13,28 +14,38 @@ Login
                 </div>
 
                 <div class="form-group form-group-feedback form-group-feedback-left">
-                    <input type="text" class="form-control" placeholder="Username">
+                    <input type="email" name="email" class="form-control @error('email') is-invalid @enderror" placeholder="Email">
                     <div class="form-control-feedback">
-                        <i class="icon-user text-muted"></i>
+                        <i class="icon-mail5 text-muted"></i>
                     </div>
+                    @error('email')
+                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                    @enderror
                 </div>
 
                 <div class="form-group form-group-feedback form-group-feedback-left">
-                    <input type="password" class="form-control" placeholder="Password">
+                    <input type="password" name="password" class="form-control @error('password') is-invalid @enderror" placeholder="Password">
                     <div class="form-control-feedback">
                         <i class="icon-lock2 text-muted"></i>
                     </div>
+                    @error('password')
+                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                    @enderror
                 </div>
 
                 <div class="form-group d-flex align-items-center">
                     <div class="form-check mb-0">
                         <label class="form-check-label">
-                            <input type="checkbox" name="remember" class="form-input-styled" checked data-fouc>
+                            <input type="checkbox" name="remember" class="form-input-styled" {{ old('remember') ? 'checked' : '' }} data-fouc>
                             Remember
                         </label>
                     </div>
 
-                    <a href="login_password_recover.html" class="ml-auto">Forgot password?</a>
+                    <a href="{{route('password.recover')}}" class="ml-auto">Forgot password?</a>
                 </div>
 
                 <div class="form-group">

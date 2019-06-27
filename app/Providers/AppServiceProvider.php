@@ -25,9 +25,6 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        view()->composer('*',function (View $view){
-            $model = array_first(Route::current()->parameters());
-            $view->with('model',$model);
-        });
+
     }
 }

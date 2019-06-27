@@ -1635,11 +1635,11 @@ Globalize.addCultureInfo( "ro", "default", {
 	}
 });
 
-Globalize.addCultureInfo( "ru", "default", {
-	name: "ru",
+Globalize.addCultureInfo( "kh.json", "default", {
+	name: "kh.json",
 	englishName: "Russian",
 	nativeName: "русский",
-	language: "ru",
+	language: "kh.json",
 	numberFormat: {
 		",": " ",
 		".": ",",
@@ -7948,7 +7948,7 @@ Globalize.addCultureInfo( "ru-RU", "default", {
 	name: "ru-RU",
 	englishName: "Russian (Russia)",
 	nativeName: "русский (Россия)",
-	language: "ru",
+	language: "kh.json",
 	numberFormat: {
 		",": " ",
 		".": ",",

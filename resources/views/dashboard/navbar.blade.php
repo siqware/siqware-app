@@ -22,14 +22,19 @@
                 </a>
             </li>
         </ul>
-
-        <ul class="navbar-nav ml-auto">
+        <ul class="navbar-nav ml-auto language-switch">
             <li class="nav-item">
-                <a href="#" class="navbar-nav-link">
-                    Text link
+                <a href="javascript:void(0);" class="navbar-nav-link english">
+                    <img src="{{asset('dashboard/material/main_assets/images/lang/gb.png')}}" class="img-flag mr-2" alt="">
+                    English
                 </a>
             </li>
-
+            <li class="nav-item">
+                <a href="javascript:void(0);" class="navbar-nav-link khmer">
+                    <img src="{{asset('dashboard/material/main_assets/images/lang/kh.png')}}" class="img-flag mr-2" alt="">
+                    Khmer
+                </a>
+            </li>
             <li class="nav-item dropdown">
                 <a href="#" class="navbar-nav-link">
                     <i class="icon-bell2"></i>

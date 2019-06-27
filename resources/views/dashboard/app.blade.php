@@ -33,7 +33,12 @@
     <!-- /core JS files -->
 
     <!-- Theme JS files -->
+    <script src="{{asset('dashboard/material/main_assets/js/plugins/internationalization/i18next.min.js')}}"></script>
+    <script src="{{asset('dashboard/material/main_assets/js/plugins/internationalization/jquery-i18next.min.js')}}"></script>
+    <script src="{{asset('dashboard/material/main_assets/js/plugins/internationalization/i18nextXHRBackend.min.js')}}"></script>
+    <script src="{{asset('dashboard/material/main_assets/js/plugins/internationalization/i18nextBrowserLanguageDetector.min.js')}}"></script>
     <script src="{{asset('dashboard/material/assets/js/app.js')}}"></script>
+    <script src="{{asset('dashboard/material/main_assets/js/demo_pages/internationalization_switch_direct.js')}}"></script>
     <!-- /theme JS files -->
 
     <!-- route JS files -->

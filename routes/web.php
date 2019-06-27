@@ -20,5 +20,7 @@ Route::get('/file-manager', function (){return view('vendor.file-manager.fmButto
 Route::get('/media', function (){return view('media.index');})->name('media');
 /*UserController*/
 Route::resource('user','UserController');
-/*Route::get('login','UserController@login')->name('login');
-Route::get('register','UserController@register')->name('register');*/
+Route::get('login','UserController@login_index')->name('login');
+Route::get('register','UserController@register_index')->name('register');
+Route::get('authentication/password/recover','UserController@recover_index')->name('password.recover');
+Route::get('authentication','UserController@authentication_index')->name('authentication.index');

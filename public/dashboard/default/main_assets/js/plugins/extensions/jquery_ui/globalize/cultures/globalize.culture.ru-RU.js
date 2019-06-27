@@ -29,7 +29,7 @@ Globalize.addCultureInfo( "ru-RU", "default", {
 	name: "ru-RU",
 	englishName: "Russian (Russia)",
 	nativeName: "русский (Россия)",
-	language: "ru",
+	language: "kh.json",
 	numberFormat: {
 		",": " ",
 		".": ",",
